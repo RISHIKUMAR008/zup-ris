@@ -1,0 +1,139 @@
+/* General Page Layout */
+.app {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at center, #0b0d17, #000);
+  color: #f5f5f5;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Title */
+.title {
+  font-size: 2.2rem;
+  color: #ffe81f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #ffe81f, 0 0 20px #ffe81f;
+}
+
+/* Search & Filter Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.controls input,
+.controls select {
+  background-color: #1b1d2b;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 180px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.controls input:focus,
+.controls select:focus {
+  border-color: #ffe81f;
+  box-shadow: 0 0 5px #ffe81f;
+}
+
+/* Character Card */
+.character-card {
+  background-color: #1b1d2b;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 232, 31, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+}
+
+.character-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 232, 31, 0.4);
+}
+
+.character-card img {
+  border-radius: 0.8rem;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.character-card h3 {
+  margin-top: 1rem;
+  color: #ffe81f;
+  letter-spacing: 1px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  background-color: #ffe81f;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #fff35a;
+}
+
+.pagination button:disabled {
+  background-color: #333;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Status and Error */
+.status,
+.error {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-card {
+    width: 90%;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+}

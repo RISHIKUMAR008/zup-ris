@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.character-card.single {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.character-card.single:hover {
+  transform: scale(1.05);
+}
+
+.character-card.single img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.pagination button {
+  background-color: #222;
   color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button:hover {
+  background-color: #444;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-btn:hover {
+  background-color: darkred;
 }
